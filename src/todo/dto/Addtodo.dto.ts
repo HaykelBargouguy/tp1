@@ -11,4 +11,6 @@ export class AddTodoDto {
     @IsNotEmpty({ message : MY_VALIDATION.DESCRIPTION_REQUIRED})
     @MinLength(10,{message :MY_VALIDATION.DESCRIPTION_MIN_LENGTH})
     description :string ; 
+
+    
 }

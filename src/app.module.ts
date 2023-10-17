@@ -5,6 +5,7 @@ import { CommonModule } from './common/common.module';
 import { UserModule } from './user/user.module';
 import { TodoModule } from './todo/todo.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { TodoEntity } from './todo/entities/todo.entity';
 
 
 @Module({
@@ -15,9 +16,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       port: 3306,
       username: 'root',
       password: '',
-      database: 'tp1',
-      entities: [],
+      database: 'tp11',
+      entities: [TodoEntity],
       synchronize: true,
+      logging:true,
     }),
   ],
   controllers: [AppController],
